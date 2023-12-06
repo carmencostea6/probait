@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bara de Navigare</title>
+    <style>
+        body {
+            background-color: #FF00CC;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        
+        }
+
+        nav {
+            background-color: #3300FF;
+            overflow: hidden;
+        }
+
+        nav img {
+            height: 50px; 
+            padding: 5px;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color:#FF00CC ;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #FF00CC;
+            color: rgb(0, 0, 0);
+        }
+        div img {
+            float: right; 
+            margin-left: 50px;
+            margin-top: 50px; 
+            margin-right: 50px;
+            width: 300px;
+            height: 300px; 
+        }
+    </style>
+    <script src="backend.js" defer>
+        <script>
+        function loginUser(event) {
+            event.preventDefault(); 
+
+  
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+
+           
+            if (email === 'utilizator@exemplu.com' && password === 'parola') {
+                alert('Autentificare reușită!');
+               
+            } else {
+                alert('Autentificare eșuată. Verificați emailul și parola.');
+            }
+        }
+    </script>
+    </script>
+</head>
+<body>
+   
+
+    <div id="registerForm" style="display: none;">
+        <!-- Formular de înregistrare -->
+        <form id="registrationForm" onsubmit="registerUser(event)">
+            Nume: <input type="text" id="name" required><br>
+            Prenume: <input type="text" id="surname" required><br>
+            Nr. Tel: <input type="text" id="phoneNumber" required><br>
+            Email: <input type="email" id="email" required><br>
+            Parola: <input type="password" id="password" required><br>
+            <button type="submit">Înregistrare</button>
+        </form>
+    </div>
+
+    <div id="loginForm" style="display: none;">
+        <!-- Formular de autentificare -->
+        <form id="loginForm" onsubmit="loginUser(event)">
+            Email: <input type="email" id="loginEmail" required><br>
+            Parola: <input type="password" id="loginPassword" required><br>
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+
+    <nav>
+        <img src="logo.jpeg" alt="Logo">
+        <a href="#register">Register</a>
+        <a href="#login">Login</a>
+    </nav>
+
+   <div>
+    <img src="meme.png">
+    <h1>Scopul site-ului</h1>
+    <p style="color:#3300FF; font-weight: bold;">Cu totii stim cat de grea si coplesitoare se poate simti Facultatea de Automatica si Calculatoare pentru studenti. Totusi, cum am reusi sa supravietuim aici daca nu am fi o comunitate unita?</p>
+    <p style="color:#3300FF; font-weight: bold;">Am creat un poll pentru a vedea parerile si preferintele automatistilor in legatura cu propria lor facultate si pentru a ne ajuta sa imbunatatim viata de zi cu zi a studentilor.</p>
+    <p style="color:#3300FF; font-weight: bold;">Si pentru ca viata nu este de cele mai multe ori roz, ajutati-ne sa o facem mai vesela impreuna</p>
+    <h1>LET'S GET STARTED</h1>
+    <style>
+        #option3Label {
+          color: blue;
+        }
+      </style>
+   </div>
+   <h1>Vote on Your Favorite Option</h1>
+  <p>Care este cantina voastra preferata?</p>
+  <form action="submit_vote.php" method="post">
+    <label for="option1">
+      <input type="radio" name="vote" id="option1" value="option1">
+        cea de la rectorat;
+    </label>
+
+    <br>
+
+    <label for="option2">
+      <input type="radio" name="vote" id="option2" value="option2">
+      cea din automatica;
+    </label>
+
+    <br>
+
+    <label for="option3">
+      <input type="radio" name="vote" id="option3" value="option3">
+      regieee.
+    </label>
+
+    <br>
+
+    <input type="submit" value="Vote">
+  </form>
+  <p>Care subiect va da cele mai mari batai de cap?</p>
+  <form action="submit_vote.php" method="post">
+    <label for="option1">
+      <input type="radio" name="vote" id="option1" value="option1">
+      Matematica;
+    </label>
+
+    <br>
+
+    <label for="option2">
+      <input type="radio" name="vote" id="option2" value="option2">
+      Fizica;
+    </label>
+
+    <br>
+
+    <label for="option3">
+      <input type="radio" name="vote" id="option3" value="option3">
+      Programarea.
+    </label>
+
+    <br>
+
+    <input type="submit" value="Vote">
+  </form>
+    Care asociatie studenteasca vi se pare cea mai cool?
+  <form action="submit_vote.php" method="post">
+    <label for="option1">
+      <input type="radio" name="vote" id="option1" value="option1">
+      LSAC
+    </label>
+
+    <br>
+
+    <label for="option2">
+      <input type="radio" name="vote" id="option2" value="option2">
+      oricare alta
+    </label>
+
+
+    <br>
+
+    <label for="option3" id="option3Label" >
+      <input type="radio" name="vote" id="option3" value="option3">
+      tot LSAC dar cu albastru
+    </label>
+      <br>
+      <input type="submit" value="Vote">
+   </form>
+</body>
 
